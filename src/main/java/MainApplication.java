@@ -1,11 +1,24 @@
 import Config.BoringWorkConfiguration;
+import DAO.InvoiceDAO;
+import Pojo.Invoice;
+import Resources.Invoice.InvoiceResourse;
 import io.dropwizard.Application;
+import io.dropwizard.db.DataSourceFactory;
+import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
 public class MainApplication extends Application<BoringWorkConfiguration> {
 
+    final HibernateBundle<BoringWorkConfiguration> hibernate=new HibernateBundle<BoringWorkConfiguration>(Invoice.class) {
+        @Override
+        public DataSourceFactory getDataSourceFactory(BoringWorkConfiguration configuration) {
+            return configuration.getDatabaseConfiguration();
+        }
+    };
+
     public static void main(String args[]) throws Exception{
+
         new MainApplication().run(args);
     }
     @Override
@@ -14,12 +27,16 @@ public class MainApplication extends Application<BoringWorkConfiguration> {
     }
     @Override
     public void run(BoringWorkConfiguration configuration, Environment environment) throws Exception {
-
+        final InvoiceResourse invoiceResourse=new InvoiceResourse();
+        environment.jersey().register(invoiceResourse);
+    //    final InvoiceDAO invoiceDAO=new InvoiceDAO(hibernate.getSessionFactory());
     }
 
     @Override
     public void initialize(Bootstrap<BoringWorkConfiguration> bootstrap) {
         // nothing to do yet
+
+        bootstrap.addBundle(hibernate);
     }
 
 }

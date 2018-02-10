@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.dropwizard:dropwizard-validation:1.2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.dropwizard/dropwizard-validation/1.2.1/502daa4b41dc77eda8f1fe44e16c453c9f5d178f/dropwizard-validation-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.dropwizard/dropwizard-validation/1.2.1/4af2c358614300a96af0dc8c2254226f8f0b5f29/dropwizard-validation-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,33 @@
+template: Hello
+defaultName: Stranger
+
+databaseConfiguration:
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+
+ # the JDBC URL
+  url: jdbc:mysql://localhost:3306/billingSystem
+
+  # the username
+  user: root
+
+  # the password
+  password: ""
+  properties:
+    charSet: UTF-8
+    hibernate.generate_statistics: false
+    hibernate.dialect: org.hibernate.dialect.MySQLDialect
+    hibernate.session.events.log: false
+    hibernate.show_sql: true
+    hibernate.format_sql: true
+  maxWaitForConnection: 10s
+  validationQuery: "/* MyService 2ealth Check */ SELECT 1"
+
+  initialSize: 2
+  minSize: 2
+  maxSize: 10
+  checkConnectionWhileIdle: true
+  checkConnectionOnReturn: true
+  checkConnectionOnBorrow: true
+  validationInterval: 5s
+  minIdleTime: 1 minute

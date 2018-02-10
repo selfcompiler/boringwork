@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.dropwizard:dropwizard-migrations:1.2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.dropwizard/dropwizard-migrations/1.2.1/abccbf2b378830f710a261299897e4adfa8c7063/dropwizard-migrations-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.dropwizard/dropwizard-migrations/1.2.1/dd648a8d4f8b71e4f74a4fde9914d924672307e1/dropwizard-migrations-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
