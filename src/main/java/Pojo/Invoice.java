@@ -8,10 +8,10 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "Invoice")
-//@NamedQuery(
-//        name="getInvoice",
-//        query="SELECT p FROM Invoice p"
-//)
+@NamedQuery(
+        name="getInvoice",
+        query="SELECT p FROM Invoice p"
+)
 public class Invoice {
     @Column(name = "id", insertable= false, updatable = false)
     @Id
@@ -44,6 +44,6 @@ public class Invoice {
     private String comments;
     @Column(name = "invoice_attributes")
     private String invoiceAttributes;
-    @Column(name = "sellerAddress_id")
+    @Column(name = "seller_address_id")
     private String sellerAddressId;
 }

@@ -27,9 +27,10 @@ public class MainApplication extends Application<BoringWorkConfiguration> {
     }
     @Override
     public void run(BoringWorkConfiguration configuration, Environment environment) throws Exception {
-        final InvoiceResourse invoiceResourse=new InvoiceResourse();
+        final InvoiceDAO invoiceDAO=new InvoiceDAO(hibernate.getSessionFactory());
+        final InvoiceResourse invoiceResourse=new InvoiceResourse(invoiceDAO);
         environment.jersey().register(invoiceResourse);
-    //    final InvoiceDAO invoiceDAO=new InvoiceDAO(hibernate.getSessionFactory());
+
     }
 
     @Override
